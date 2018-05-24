@@ -87,20 +87,24 @@ $(document).ready(function() {
   
 
     // Update train table data from database and new calculated values
+        var deleteIcon = $('<i>');
+        deleteIcon.addClass("fas fa-bolt removeRow");
 
     $('#trainTable').append("<tr><td>" +
         trainName + "</td><td>" +
         trainDestination + "</td><td>" +
         trainFrequency + "</td><td>" +
         trainNextTime + "</td><td>" +
-        timeAwayNext + "</td></tr>");
+        timeAwayNext + "</td><td>" +
+        '<i class="fas fa-bolt removeRow"></i>' + "</td></tr>");
 
     });
 
 
 
+    // on click function to delete table row
+    $('body').on("click", 'i.removeRow', function() {
+        $(this).closest('tr').remove();
 
-
-
-
+    });
 });

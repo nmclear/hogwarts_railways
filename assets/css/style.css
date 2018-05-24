@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/stardust/stardust.png);
+    background-attachment: fixed;
+}
+
+#jumboImg {
+    margin-bottom: 20px;
+}
+
+.hpBGImg {
+    max-height: 450px;
+    width: 100%;
+}
+
+.container {
+    margin-bottom: 40px;
+}
+
+.hpPhoto {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.table {
+    color: #e4e0dd;
+    background: transparent;
+}
+
+th,
+td {
+    text-align: center;
+}
+
+.removeRow {
+    color: #FDD023;
+}
+
+label,
+h3{
+    color: #e1b45f;
+}
+
+input[type=time]:focus,
+input[type=number]:focus,
+input[type=name]:focus,
+input[type=time],
+input[type=number],
+input[type=name] {
+    background: transparent;
+    color: #e4e0dd;
+}
+
+#addTrainBtn {
+    color: #77241f;
+    background: #e1b45f;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 22px;
+}
+
+#addTrainBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
