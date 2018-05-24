@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Firebase Project</title>
+    <title>Catch a Train</title>
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,6 +15,87 @@
     
 
 
+<div class="container">
+    <div class="row" id="jumbotronInfo" >
+        <div class="col-lg-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Anytime is Train Time</h1>
+                  <p class="lead">All aboard the polar express</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="trainScheduleInfo">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Current Train Schedule</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Polar Express</th>
+                            <td>North Pole</td>
+                            <td>1</td>
+                            <td>6:00 PM</td>
+                            <td>23</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="addTrainInfo">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Add Train</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <form id="addTrainForm">
+                                <div class="form-group">
+                                    <label for="trainName">Train Name</label>
+                                    <input type="name" class="form-control" id="trainNameInput">
+                                </div>
+                                <div class="form-group">
+                                    <label for="trainDestination">Destination</label>
+                                    <input type="name" class="form-control" id="trainDestinationInput">
+                                </div>
+                                <div class="form-group">
+                                    <label for="trainTime">First Train Time (HH:mm)</label>
+                                    <input type="date" class="form-control" id="trainTimeInput">
+                                </div>
+                                <div class="form-group">
+                                    <label for="trainFrequency">Frequency (min)</label>
+                                    <input type="number" class="form-control" id="trainFrequencyInput">
+                                </div>
+                                <button id="submitForm">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -23,6 +104,7 @@
 
 
 
+    
 
 
 
