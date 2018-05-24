@@ -22,8 +22,8 @@ $(document).ready(function() {
         //store user input about trains
         var name = $("#trainNameInput").val().trim();
         var destination = $("#trainDestinationInput").val().trim();
-        var time = $("#trainTimeInput").val().trim();
         var frequency = $("#trainFrequencyInput").val().trim();
+        var time = $("#trainTimeInput").val().trim();
 
         //create temp local newTrain object
         var newTrain = {
@@ -43,7 +43,10 @@ $(document).ready(function() {
 
 
     // Store data into local variables using childSnapshot
-
+    var trainName = childSnapshot.val().name;
+    var trainDestination = childSnapshot.val().destination;
+    var trainFrequency = childSnapshot.val().frequency;
+    var trainTime = childSnapshot.val().time;
 
     //Calculate next arrival time using first train time and frequency
 
@@ -52,7 +55,13 @@ $(document).ready(function() {
 
 
     // Update train table data from database and new calculated values
-    
+
+    $('#trainTable').append("<tr><td>" +
+        trainName + "</td><td>" +
+        trainDestination + "</td><td>" +
+        trainFrequency + "</td><td>" +
+        trainTime + "</td></tr>");
+
     });
 
 
