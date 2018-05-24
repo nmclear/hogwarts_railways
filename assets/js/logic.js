@@ -67,23 +67,23 @@ $(document).ready(function() {
                         // 7:23pm + 17 minutes = 7:40pm
                 
 
-
+    // Calculate minutes away time using current time and next schedule departure
         // First Time (pushed back 1 year to make sure it comes before current time)
         var firstTimeConv = moment(trainFirstTime, "HH:mm").subtract(1, "years");
-
         // Current Time
         var currentTime = moment();
-
         // Difference between trainFirstTime and currentTime
         var diffTime = moment().diff(moment(firstTimeConv), "minutes");
-
+        //Modulus for remaining time
         var minRemainder = diffTime % trainFrequency;
+        // Difference between frequency and remaining time before train
         var timeAwayNext = trainFrequency - minRemainder;
 
 
+    //Calculate next arrival time using first train time and frequency
+        var trainTime = moment().add(timeAwayNext, "minutes");
+        var trainNextTime = trainTime.format("hh:mm A");
 
-
-    // Calculate minutes away time using current time and next schedule departure
   
 
     // Update train table data from database and new calculated values
@@ -92,7 +92,7 @@ $(document).ready(function() {
         trainName + "</td><td>" +
         trainDestination + "</td><td>" +
         trainFrequency + "</td><td>" +
-        trainFirstTime + "</td><td>" +
+        trainNextTime + "</td><td>" +
         timeAwayNext + "</td></tr>");
 
     });
