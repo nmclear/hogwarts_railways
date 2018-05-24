@@ -1,7 +1,6 @@
 //DOCUMENT READY
 $(document).ready(function() {
 
-
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyC3IOq8n0FDNK-1UzfXRFdJAQuE3u7YT6k",
@@ -20,33 +19,41 @@ $(document).ready(function() {
     $('#addTrainBtn').on('click', function(event){
         event.preventDefault();
 
-    //store user input about trains
-    var name = $("#trainNameInput").val().trim();
-    var destination = $("#trainDestinationInput").val().trim();
-    var time = $("#trainTimeInput").val().trim();
-    var frequency = $("#trainFrequencyInput").val().trim();
+        //store user input about trains
+        var name = $("#trainNameInput").val().trim();
+        var destination = $("#trainDestinationInput").val().trim();
+        var time = $("#trainTimeInput").val().trim();
+        var frequency = $("#trainFrequencyInput").val().trim();
 
-    //create temp local newTrain object
-    var newTrain = {
-        name: name,
-        destination: destination,
-        time: time,
-        frequency: frequency
-    };
+        //create temp local newTrain object
+        var newTrain = {
+            name: name,
+            destination: destination,
+            time: time,
+            frequency: frequency
+        };
 
-    //updates the newTrain information to the database
-    database.ref().push(newTrain);
-
-
-
-
-
-
-
-
+        //updates the newTrain information to the database
+        database.ref().push(newTrain);
     });
 
 
+    // Pull train info from database and update html content
+    database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+
+
+    // Store data into local variables using childSnapshot
+
+
+    //Calculate next arrival time using first train time and frequency
+
+
+    // Calculate minutes away time using current time and next schedule departure
+
+
+    // Update train table data from database and new calculated values
+    
+    });
 
 
 
