@@ -17,19 +17,25 @@ $(document).ready(function() {
     var database = firebase.database();
 
     //on click of adding train button
-    $('#addTrainBtn').on('click', function(){
+    $('#addTrainBtn').on('click', function(event){
         event.preventDefault();
-
 
     //store user input about trains
     var name = $("#trainNameInput").val().trim();
     var destination = $("#trainDestinationInput").val().trim();
-    var time = moment($("#trainTimeInput").val().trim(), "HH/mm").startOf('hour');
+    var time = $("#trainTimeInput").val().trim();
     var frequency = $("#trainFrequencyInput").val().trim();
 
-    
+    //create temp local newTrain object
+    var newTrain = {
+        name: name,
+        destination: destination,
+        time: time,
+        frequency: frequency
+    };
 
-
+    //updates the newTrain information to the database
+    database.ref().push(newTrain);
 
 
 
