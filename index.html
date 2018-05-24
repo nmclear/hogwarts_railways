@@ -14,7 +14,6 @@
 <body>
     
 
-
 <div class="container">
     <div class="row" id="jumbotronInfo" >
         <div class="col-lg-12">
@@ -81,13 +80,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="trainTime">First Train Time (HH:mm)</label>
-                                    <input type="date" class="form-control" id="trainTimeInput">
+                                    <input type="time" class="form-control" id="trainTimeInput">
                                 </div>
                                 <div class="form-group">
                                     <label for="trainFrequency">Frequency (min)</label>
                                     <input type="number" class="form-control" id="trainFrequencyInput">
                                 </div>
-                                <button id="submitForm">Submit</button>
+                                <button id="addTrainBtn">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -101,19 +100,6 @@
 
 
 
-
-
-
-    
-
-
-
-
-
-
-
-
-
 <!-- JavaScript Files-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -121,6 +107,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<script src="moment.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
 <script src="assets/js/logic.js"></script>
 
 </body>
