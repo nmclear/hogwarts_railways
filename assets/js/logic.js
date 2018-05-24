@@ -46,13 +46,45 @@ $(document).ready(function() {
     var trainName = childSnapshot.val().name;
     var trainDestination = childSnapshot.val().destination;
     var trainFrequency = childSnapshot.val().frequency;
-    var trainTime = childSnapshot.val().time;
+    var trainFirstTime = childSnapshot.val().time;
 
     //Calculate next arrival time using first train time and frequency
+                // (TEST 1)
+                // First Train of the Day is 6:00pm
+                // Assume Train comes every 20 minutes.
+                // Assume the current time is 7:23 PM....
+                // What time would the next train be...?
+                    //  It would be 7:40 -- 17 minutes away
+
+                // (TEST 1 MATH)
+                    // time away from even hour
+                        // 23 - 00 = 23
+                    // remainder of current time of frequency
+                        // 23 % 20 = 3
+                    // difference between remainder and frequency to determine time left before next train
+                        // 20 - 3 = 17
+                    // add current time to time before next train
+                        // 7:23pm + 17 minutes = 7:40pm
+                
+
+
+        // First Time (pushed back 1 year to make sure it comes before current time)
+        var firstTimeConv = moment(trainFirstTime, "HH:mm").subtract(1, "years");
+
+        // Current Time
+        var currentTime = moment();
+
+        // Difference between trainFirstTime and currentTime
+        var diffTime = moment().diff(moment(firstTimeConv), "minutes");
+
+        var minRemainder = diffTime % trainFrequency;
+        var timeAwayNext = trainFrequency - minRemainder;
+
+
 
 
     // Calculate minutes away time using current time and next schedule departure
-
+  
 
     // Update train table data from database and new calculated values
 
@@ -60,7 +92,8 @@ $(document).ready(function() {
         trainName + "</td><td>" +
         trainDestination + "</td><td>" +
         trainFrequency + "</td><td>" +
-        trainTime + "</td></tr>");
+        trainFirstTime + "</td><td>" +
+        timeAwayNext + "</td></tr>");
 
     });
 
