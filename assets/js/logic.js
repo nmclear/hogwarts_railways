@@ -84,8 +84,6 @@ $(document).ready(function() {
         var trainTime = moment().add(timeAwayNext, "minutes");
         var trainNextTime = trainTime.format("hh:mm A");
 
-  
-
     // Update train table data from database and new calculated values
         var deleteIcon = $('<i>');
         deleteIcon.addClass("fas fa-bolt removeRow");

@@ -5,6 +5,7 @@
 body {
     background-image: url(../images/stardust/stardust.png);
     background-attachment: fixed;
+    font-family: 'Lato', sans-serif;
 }
 
 #jumboImg {
@@ -39,8 +40,13 @@ td {
     color: #FDD023;
 }
 
-label,
 h3{
+    color: #e1b45f;
+    font-family: 'Caveat', cursive;
+}
+
+label,
+th {
     color: #e1b45f;
 }
 
@@ -61,8 +67,15 @@ input[type=name] {
     border-radius: 25px;
     padding: 10px 20px;
     font-size: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
 }
 
 #addTrainBtn:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.removeRow {
+    cursor: pointer;
 }
