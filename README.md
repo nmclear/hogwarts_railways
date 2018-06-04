@@ -1,6 +1,3 @@
-# homework_7_firebase
-https://nmclear.github.io/homework_7_firebase/
-
 # Howgrats Railways Train Schedule
 #### Step right up and travel the wizarding world!
 
